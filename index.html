@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080d13">
+  <meta name="description" content="A market information dashboard with live crypto and forex quotes, delayed stock quotes, and a separate hypothetical shock model.">
+  <title>AXIOM / The Intelligence Desk</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+  <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-market-overview.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="logo" href="#dashboard" aria-label="AXIOM home"><span class="logo-mark">A<span>✦</span></span><span>AXIOM<small>THE INTELLIGENCE DESK</small></span></a>
+      <div class="side-caption">WORKSPACE <span>01 / 04</span></div>
+      <nav aria-label="Primary navigation" class="main-nav">
+        <a href="#dashboard" data-nav="dashboard"><span class="nav-icon">▦</span> Command center</a>
+        <a href="#map" data-nav="map"><span class="nav-icon">◇</span> Company network</a>
+        <a href="#scenarios" data-nav="scenarios"><span class="nav-icon">◉</span> Shock laboratory</a>
+        <a href="#portfolio" data-nav="portfolio"><span class="nav-icon">▥</span> Portfolio & funds</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="operator"><span class="operator-avatar">AG</span><div>DESK OPERATOR<small>Research prototype</small></div></div><p>“The edge is knowing what connects.”</p><div class="fiction">● LIVE FEED + SEPARATE MODEL</div></div>
+    </aside>
+    <div class="main-wrap">
+      <header class="topbar"><div class="top-path"><span class="top-brand">AXIOM</span><span class="slash">/</span><span id="route-name">COMMAND CENTER</span></div><div class="top-right"><span class="live-indicator">● MARKET FEED</span><span class="top-clock" id="clock">--:-- IST</span><span class="top-badge">DESK 01</span></div></header>
+      <div class="ticker live-ticker" aria-label="Market quotes by TradingView"><tv-ticker-tape symbols="NASDAQ:MSFT,NASDAQ:NVDA,NASDAQ:AAPL,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,FX:EURUSD" theme="dark" hide-chart></tv-ticker-tape></div>
+      <section id="live-market-panel" class="live-market-panel" aria-label="Current market information"><div class="live-market-heading"><div><span class="kicker">MARKET INFORMATION / TRADINGVIEW</span><h2>Markets right now</h2></div><span class="section-meta">STOCK QUOTES MAY BE DELAYED · CRYPTO &amp; FX LIVE</span></div><tv-market-overview theme="dark" symbol-sectors='[{"sectionName":"US stocks · delayed","symbols":["NASDAQ:MSFT","NASDAQ:NVDA","NASDAQ:AAPL"]},{"sectionName":"Crypto · live","symbols":["BITSTAMP:BTCUSD","BITSTAMP:ETHUSD"]},{"sectionName":"Forex · live","symbols":["FX:EURUSD","FX:USDINR"]}]'></tv-market-overview><p class="feed-note">Quotes provided by TradingView when online. Stock quotes are exchange delayed. Market data does not drive the hypothetical scenario model. <a href="https://www.tradingview.com/markets/" target="_blank" rel="noopener noreferrer">View source ↗</a></p></section>
+      <main id="app" tabindex="-1"></main>
+      <footer>AXIOM // MARKET QUOTES BY TRADINGVIEW <span>·</span> Company network and shock outcomes are hypothetical <span>·</span> No trading or advice</footer>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation"><a data-nav="dashboard" href="#dashboard">Desk</a><a data-nav="map" href="#map">Network</a><a data-nav="scenarios" href="#scenarios">Shocks</a><a data-nav="portfolio" href="#portfolio">Holdings</a></nav>
+  <script src="app.js"></script>
+</body>
+</html>
